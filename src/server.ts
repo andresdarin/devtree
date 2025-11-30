@@ -1,7 +1,12 @@
 import express from 'express'; //ESM import syntax
-const app = express();
+import 'dotenv/config';
 import router from './router';
+import { connectDB } from './config/db';
 
+//Connect to DataBase
+connectDB();
+
+const app = express();
 //Leer datos de forms
 app.use(express.json());
 
