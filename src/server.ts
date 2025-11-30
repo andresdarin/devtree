@@ -11,6 +11,6 @@ const app = express();
 app.use(express.json());
 
 //Routing
-app.use('/api', router);
+app.use('/', router);
 
 export default app;
