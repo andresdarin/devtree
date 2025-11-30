@@ -2,15 +2,11 @@ import { Router } from "express";
 
 const router = Router();
 
-// Define your routes here
-router.get('/', (req, res) => {
-    res.send('¡Hola, mundo! Ruta desde el router funcionando correctamente.');
-});
-router.get('/nosotros', (req, res) => {
-    res.send('¡Página de Nosotros!');
-});
-router.get('/blog', (req, res) => {
-    res.send('¡Página de Blog!');
+/* Auth and Register */
+router.post('/auth/register', (req, res) => {
+    // Lógica de autenticación
+    res.send(req.body);
+    console.log(req.body);
 });
 
 export default router;
